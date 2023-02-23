@@ -6,7 +6,7 @@ import { Except, Simplify, ValueOf } from "type-fest";
 import { RestypedBase, RestypedRoute } from "./restyped";
 import { flow, pipe } from "fp-ts/function";
 
-import { funFetch } from "@fun-ts/fetch";
+import { funFetch } from "fun-ts-fetch";
 import { interpolatePath } from "./path";
 
 type ApiMethods =
@@ -32,6 +32,7 @@ type ApiRouteFromMethod<
     api extends RestypedBase,
     method extends ApiMethods,
 > = {
+    // eslint-disable-next-line @typescript-eslint/ban-types
     [path in keyof api]: api[path] extends Record<method, {}> ? path : never;
 }[ApiRoute<api>];
 
