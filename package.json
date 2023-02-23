@@ -1,0 +1,70 @@
+{
+    "name": "fun-ts-rest-client",
+    "description": "Typed fetch client for REST APIs based on functional TypeScript.",
+    "version": "0.1.0",
+    "author": {
+        "name": "Jonathan Philipps",
+        "url": "https://github.com/jphilipps"
+    },
+    "contributors": [
+        {
+            "name": "Thomas Müller",
+            "url": "https://github.com/tmueller"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ScepLab/fun-ts-rest-client"
+    },
+    "bugs": {
+        "url": "https://github.com/ScepLab/fun-ts-rest-client/issues"
+    },
+    "keywords": [
+        "fun",
+        "typescript",
+        "functional-programming"
+    ],
+    "engineStrict": true,
+    "engines": {
+        "node": "18.14.1",
+        "pnpm": "7.27.1"
+    },
+    "license": "MIT",
+    "module": "./dist/index.js",
+    "main": "./dist/index.cjs",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "sideEffects": false,
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "lint": "eslint ./src/**/*.ts*",
+        "build": "npm run -s clean && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
+        "clean": "rm -rf ./dist",
+        "polish": "rm -rf .turbo && rm -rf ./node_modules && rm -rf ./dist",
+        "deliver": "pnpm publish --access=public"
+    },
+    "dependencies": {
+        "fp-ts": "^2.12.1",
+        "@morphic-ts/adt": "^3.0.0",
+        "fun-ts-fetch": "^0.1.0"
+    },
+    "peerDependencies": {
+        "io-ts": "^2.2.16",
+        "history": "^4.10.1",
+        "type-fest": "^3.6.0"
+    },
+    "devDependencies": {
+        "io-ts": "^2.2.16",
+        "cross-fetch": "^3.1.5",
+        "@typescript-eslint/eslint-plugin": "5.53.0",
+        "@typescript-eslint/parser": "5.53.0",
+        "cspell": "6.26.3",
+        "eslint": "8.34.0",
+        "jshint": "2.13.6",
+        "esbuild": "0.16.0",
+        "esbuild-node-externals": "1.6.0",
+        "typescript": "4.9.5"
+    }
+}
