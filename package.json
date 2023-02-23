@@ -1,7 +1,7 @@
 {
     "name": "fun-ts-rest-client",
     "description": "Typed fetch client for REST APIs based on functional TypeScript.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": {
         "name": "Jonathan Philipps",
         "url": "https://github.com/jphilipps"
