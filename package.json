@@ -52,7 +52,6 @@
     },
     "peerDependencies": {
         "io-ts": "^2.2.16",
-        "history": "^4.10.1",
         "type-fest": "^3.6.0"
     },
     "devDependencies": {
