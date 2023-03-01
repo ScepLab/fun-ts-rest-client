@@ -22,7 +22,9 @@
     "keywords": [
         "fun",
         "typescript",
-        "functional-programming"
+        "functional-programming",
+        "client",
+        "rest"
     ],
     "engineStrict": true,
     "engines": {
@@ -45,25 +47,25 @@
         "polish": "rm -rf .turbo && rm -rf ./node_modules && rm -rf ./dist",
         "deliver": "pnpm publish --access=public"
     },
-    "dependencies": {
-        "fp-ts": "^2.12.1",
-        "@morphic-ts/adt": "^3.0.0",
-        "fun-ts-fetch": "^0.1.1"
-    },
     "peerDependencies": {
-        "io-ts": "^2.2.16",
+        "fp-ts": "^2.13.1",
+        "io-ts": "^2.2.20",
+        "fun-ts-fetch": "^0.1.2",
+        "@morphic-ts/adt": "^3.0.0",
         "type-fest": "^3.6.0"
     },
     "devDependencies": {
-        "type-fest": "^3.6.0",
-        "io-ts": "^2.2.16",
-        "cross-fetch": "^3.1.5",
-        "@typescript-eslint/eslint-plugin": "5.53.0",
-        "@typescript-eslint/parser": "5.53.0",
-        "cspell": "6.26.3",
-        "eslint": "8.34.0",
+        "fp-ts": "2.13.1",
+        "io-ts": "2.2.20",
+        "fun-ts-fetch": "0.1.2",
+        "@morphic-ts/adt": "3.0.0",
+        "type-fest": "3.6.0",
+        "@typescript-eslint/eslint-plugin": "5.54.0",
+        "@typescript-eslint/parser": "5.54.0",
+        "cspell": "6.27.0",
+        "eslint": "8.35.0",
         "jshint": "2.13.6",
-        "esbuild": "0.16.0",
+        "esbuild": "0.16.17",
         "esbuild-node-externals": "1.6.0",
         "typescript": "4.9.5"
     }
