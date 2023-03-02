@@ -28,8 +28,8 @@
     ],
     "engineStrict": true,
     "engines": {
-        "node": "18.14.1",
-        "pnpm": "7.27.1"
+        "node": "18.14.2",
+        "pnpm": "7.28.0"
     },
     "license": "MIT",
     "module": "./dist/index.js",
@@ -45,21 +45,25 @@
         "build": "npm run -s clean && tsc -p ./tsconfig.json --composite false && node ./esbuild.config.js",
         "clean": "rm -rf ./dist",
         "polish": "rm -rf .turbo && rm -rf ./node_modules && rm -rf ./dist",
-        "deliver": "pnpm publish --access=public"
+        "deliver": "pnpm publish --access=public",
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
+    },
+    "dependencies": {
+        "fun-ts-fetch": "^0.1.2"
     },
     "peerDependencies": {
         "fp-ts": "^2.13.1",
         "io-ts": "^2.2.20",
-        "fun-ts-fetch": "^0.1.2",
         "@morphic-ts/adt": "^3.0.0",
         "type-fest": "^3.6.0"
     },
     "devDependencies": {
         "fp-ts": "2.13.1",
         "io-ts": "2.2.20",
-        "fun-ts-fetch": "0.1.2",
         "@morphic-ts/adt": "3.0.0",
         "type-fest": "3.6.0",
+        "vitest": "0.29.2",
         "@typescript-eslint/eslint-plugin": "5.54.0",
         "@typescript-eslint/parser": "5.54.0",
         "cspell": "6.27.0",
